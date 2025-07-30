@@ -21,6 +21,10 @@ subprojects {
         targetCompatibility = JavaVersion.VERSION_21
     }
 
+    repositories {
+        mavenCentral()
+    }
+
     dependencyManagement {
         imports {
             //noinspection UnnecessaryQualifiedReference

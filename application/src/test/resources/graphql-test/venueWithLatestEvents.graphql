@@ -1,0 +1,15 @@
+query VenueWithLatestEvents {
+    venueWithLatestEvents {
+        name
+        externalId {
+            providerId
+            brandId
+            externalId
+        }
+        events {
+            name
+            startTime
+            endTime
+        }
+    }
+}

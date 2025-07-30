@@ -1,0 +1,7 @@
+mutation saveEvent($input: SaveEventInput!) {
+    saveEvent(input: $input) {
+        name
+        startTime
+        endTime
+    }
+}

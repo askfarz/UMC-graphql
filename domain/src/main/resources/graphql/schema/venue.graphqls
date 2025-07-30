@@ -2,6 +2,7 @@ type Venue {
     id: ID!
     externalId: FullExternalId!
     name: String!
+    events: [Event!]!
 }
 
 input SaveVenueInput {

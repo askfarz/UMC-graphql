@@ -1,0 +1,11 @@
+query Events {
+    events {
+        id
+        name
+        startTime
+        endTime
+        venues {
+            name
+        }
+    }
+}

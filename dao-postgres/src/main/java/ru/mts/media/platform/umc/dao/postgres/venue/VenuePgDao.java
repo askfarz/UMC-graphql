@@ -8,6 +8,7 @@ import ru.mts.media.platform.umc.domain.gql.types.Venue;
 import ru.mts.media.platform.umc.domain.venue.VenueSave;
 import ru.mts.media.platform.umc.domain.venue.VenueSot;
 
+import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -28,6 +29,13 @@ class VenuePgDao implements VenueSot {
                 .map(mapper::asPk)
                 .flatMap(repository::findById);
         return Optional.empty();
+    }
+
+    @Override
+    public List<Venue> getVenues() {
+        return repository.findAll().stream()
+                         .map(mapper::asModel)
+                         .toList();
     }
 
     @EventListener

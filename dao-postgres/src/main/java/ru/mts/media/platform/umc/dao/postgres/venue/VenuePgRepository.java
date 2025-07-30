@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 import ru.mts.media.platform.umc.dao.postgres.common.FullExternalIdPk;
 
 @Repository
-interface VenuePgRepository extends JpaRepository<VenuePgEntity, FullExternalIdPk> {
+public interface VenuePgRepository extends JpaRepository<VenuePgEntity, FullExternalIdPk> {
 
     VenuePgEntity findByReferenceId(String referenceId);
 }
